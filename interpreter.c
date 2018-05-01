@@ -37,7 +37,7 @@ void doInstr(CodeType T){
             break;
         //...
         default:
-            printf("Wykryto nieznana instrukcje (PC=0x%08lx, T=0x%04lx)\r\n", getPC(), T);
+            printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
             saveCPUState(); //TODO: waaat
             exit(-1);
     }

@@ -47,7 +47,7 @@ void loadPC(char *file){          //�adowanie nowej warto�ci PC
         exit(-2);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Read PC file (%s) in %dbytes ", file, read(file_ptr, &tPC, sizeof(AddressType)));
+    printf("Read PC file (%s) in %ld bytes ", file, read(file_ptr, &tPC, sizeof(AddressType)));
     PC=(tPC & 0xFF00)>>8 | (tPC & 0x00FF)<<8;    //Endianess correction
     printf("[PC=0x%04X]\n", PC);
     close(file_ptr);
@@ -60,8 +60,8 @@ void loadCounter(char *file){          //�adowanie ostatnio zapisanego licznik
         exit(-2);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Read counter file (%s) in %dbytes ", file, read(file_ptr, &counter, sizeof(CounterType)));
-    printf("[counter=0x%08XloadMEMC]\n", counter);
+    printf("Read counter file (%s) in %ld bytes ", file, read(file_ptr, &counter, sizeof(CounterType)));
+    printf("[counter=0x%08lXloadMEMC]\n", counter);
     close(file_ptr);
 }
 void loadMEMC(char *file){          //�adowanie pami�ci kodu z pliku
@@ -72,7 +72,7 @@ void loadMEMC(char *file){          //�adowanie pami�ci kodu z pliku
         exit(-3);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Read MEMC (%s) file in %dbytes\n", file, read(file_ptr, (void*)MEMC, MAX_ADDRESS+1));
+    printf("Read MEMC (%s) file in %ld bytes\n", file, read(file_ptr, (void*)MEMC, MAX_ADDRESS+1));
     close(file_ptr);
 }
 void loadMEMD(char *file){        //�adowanie pami�ci danych z pliku
@@ -83,7 +83,7 @@ void loadMEMD(char *file){        //�adowanie pami�ci danych z pliku
         exit(-4);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Read MEMD (%s) file in %dbytes\n", file, read(file_ptr, (void*)MEMD, MAX_ADDRESS+1));
+    printf("Read MEMD (%s) file in %ld bytes\n", file, read(file_ptr, (void*)MEMD, MAX_ADDRESS+1));
     close(file_ptr);
 }
 void savePC(char *file){        //Zapisz warto�c PC
@@ -96,7 +96,7 @@ void savePC(char *file){        //Zapisz warto�c PC
     }
     lseek(file_ptr, 0, SEEK_SET);
     tPC=(PC & 0xFF00)>>8 | (PC & 0x00FF)<<8;		//Endianess correction
-    printf("Write PC (%s) file in %dbytes [PC=0x%04X]\n", file, write(file_ptr, &tPC, sizeof(AddressType)), PC);
+    printf("Write PC (%s) file in %ld bytes [PC=0x%04X]\n", file, write(file_ptr, &tPC, sizeof(AddressType)), PC);
     close(file_ptr);
 }
 void saveCounter(char *file){        //Zapisz warto�c licznika cykli
@@ -107,7 +107,7 @@ void saveCounter(char *file){        //Zapisz warto�c licznika cykli
         exit(-5);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Write counter (%s) file in %dbytes [counter=0x%08X]\n", file, write(file_ptr, &counter, sizeof(CounterType)), counter);
+    printf("Write counter (%s) file in %ld bytes [counter=0x%08lX]\n", file, write(file_ptr, &counter, sizeof(CounterType)), counter);
     close(file_ptr);
 }
 void saveMEMD(char *file){        //zapisz zawarto�� pami�ci danych do pliku
@@ -118,7 +118,7 @@ void saveMEMD(char *file){        //zapisz zawarto�� pami�ci danych do pli
         exit(-6);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Saved MEMD file (%s) in %dbytes\n", file, write(file_ptr, (void*)MEMD, MAX_ADDRESS));
+    printf("Saved MEMD file (%s) in %ld bytes\n", file, write(file_ptr, (void*)MEMD, MAX_ADDRESS));
     close(file_ptr);
 }
 CodeType getMEMC(AddressType p){

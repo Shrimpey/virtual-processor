@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    printf("Bledne wykonanie emulacji (PC=0x%08lx, T=0x%08lx)\r\n", getPC(), T);
+    printf("Bledne wykonanie emulacji (PC=0x%08x, T=0x%08x)\r\n", getPC(), T);
     saveCPUState();                     //!!! - Tu niepowinnismy si� nigdy znale��
     return -2;
 }
