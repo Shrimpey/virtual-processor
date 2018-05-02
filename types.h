@@ -7,7 +7,7 @@ typedef unsigned short              CodeType;
 typedef unsigned short              AddressType;
 typedef unsigned long               CounterType;
 
-//najwieksze wartosci 
+//najwieksze wartosci
 #define MAX_ADDRESS                 0xFFFF
 #define MAX_DATA_VAL                0xFF
 
@@ -21,6 +21,13 @@ typedef unsigned long               CounterType;
 
 
 //Znaczenie flag
-#define FLAG_C                      0x01
+#define FLAG_C                      0x00
+#define FLAG_Z                      0x01
+#define FLAG_N                      0x02
+#define FLAG_V                      0x03
+#define FLAG_S                      0x04
+#define FLAG_H                      0x05
+#define FLAG_T                      0x06
+#define FLAG_I                      0x07
 
 #endif //__TYPES_H__
