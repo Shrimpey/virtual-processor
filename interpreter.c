@@ -7,38 +7,32 @@
 #include "interrupt.h"
 
 //naglowki poszczegolnych opcodow
-void F_ADD1(void);
-void F_ADD2(void);
-void F_JMP_MEMC(void);
-void F_JMP_REL(void);
+//void F_ADD1(void);
+//void F_ADD2(void);
+//void F_JMP_MEMC(void);
+//void F_JMP_REL(void);
+void F_MOV1(void);
+void F_FMUL(void);
 //...
 
 //wzorce opcodow
-#define ID_ADD_R1_R2            0x01
-#define ID_ADD_R1_MEM_R2        0x02
-#define ID_JMP_MEMC             0x03
-#define ID_JMP_REL              0x04
+//#define ID_ADD_R1_R2            0x0C
+//#define ID_ADD_R1_MEM_R2        0x02
+//#define ID_JMP_MEMC             0x03
+//#define ID_JMP_REL              0x04
+#define ID_MOV_R1_R2            0x2C
+#define ID_FMUL                 0x0C
 //...
 
 
 void doInstr(CodeType T){
-    switch((T & 0xF000)>>12){   //wy�uskanie w�a�ciwego kodu operacji
-        case ID_ADD_R1_R2:       //wywolac instrukcje ADD R1,R2
-            F_ADD1();
-            break;
-        case ID_ADD_R1_MEM_R2:   //wywolac instrukcje ADD R1,[R2]
-            F_ADD2();
-            break;
-        case ID_JMP_MEMC:        //wywolac instrukcje JMP MEM
-            F_JMP_MEMC();
-            break;
-        case ID_JMP_REL:         //wywolac instrukcje JMP REL
-            F_JMP_REL();
-            break;
-        //...
-        default:
-            printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
-            saveCPUState(); //TODO: waaat
-            exit(-1);
+    if( ((T & 0xFC00)>>8) == ID_MOV_R1_R2){
+        F_MOV1();   //wywolac instrukcje MOV1
+    }else if( ((T & 0xF380)>>6) | ((T & 0x0008)>>3) == ID_FMUL){
+        F_FMUL();   //wywolac instrukcje FMUL
+    }else{
+        printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
+        saveCPUState();
+        exit(-1);
     }
 }
