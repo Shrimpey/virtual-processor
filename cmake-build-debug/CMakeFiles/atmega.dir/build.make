@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/patryk/CLionProjects/atmega
+CMAKE_SOURCE_DIR = /Users/patryk/Documents/GitHub/virtual-processor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/patryk/CLionProjects/atmega/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/atmega.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/atmega.dir/flags.make
 
 CMakeFiles/atmega.dir/f_add1.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/f_add1.c.o: ../f_add1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/atmega.dir/f_add1.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_add1.c.o   -c /Users/patryk/CLionProjects/atmega/f_add1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/atmega.dir/f_add1.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_add1.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/f_add1.c
 
 CMakeFiles/atmega.dir/f_add1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/f_add1.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/f_add1.c > CMakeFiles/atmega.dir/f_add1.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/f_add1.c > CMakeFiles/atmega.dir/f_add1.c.i
 
 CMakeFiles/atmega.dir/f_add1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/f_add1.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/f_add1.c -o CMakeFiles/atmega.dir/f_add1.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/f_add1.c -o CMakeFiles/atmega.dir/f_add1.c.s
 
 CMakeFiles/atmega.dir/f_add1.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/atmega.dir/f_add1.c.o.provides.build: CMakeFiles/atmega.dir/f_add1.c.
 
 CMakeFiles/atmega.dir/f_add2.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/f_add2.c.o: ../f_add2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/atmega.dir/f_add2.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_add2.c.o   -c /Users/patryk/CLionProjects/atmega/f_add2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/atmega.dir/f_add2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_add2.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/f_add2.c
 
 CMakeFiles/atmega.dir/f_add2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/f_add2.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/f_add2.c > CMakeFiles/atmega.dir/f_add2.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/f_add2.c > CMakeFiles/atmega.dir/f_add2.c.i
 
 CMakeFiles/atmega.dir/f_add2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/f_add2.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/f_add2.c -o CMakeFiles/atmega.dir/f_add2.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/f_add2.c -o CMakeFiles/atmega.dir/f_add2.c.s
 
 CMakeFiles/atmega.dir/f_add2.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/atmega.dir/f_add2.c.o.provides.build: CMakeFiles/atmega.dir/f_add2.c.
 
 CMakeFiles/atmega.dir/f_jmp_memc.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/f_jmp_memc.c.o: ../f_jmp_memc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/atmega.dir/f_jmp_memc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_jmp_memc.c.o   -c /Users/patryk/CLionProjects/atmega/f_jmp_memc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/atmega.dir/f_jmp_memc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_jmp_memc.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_memc.c
 
 CMakeFiles/atmega.dir/f_jmp_memc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/f_jmp_memc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/f_jmp_memc.c > CMakeFiles/atmega.dir/f_jmp_memc.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_memc.c > CMakeFiles/atmega.dir/f_jmp_memc.c.i
 
 CMakeFiles/atmega.dir/f_jmp_memc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/f_jmp_memc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/f_jmp_memc.c -o CMakeFiles/atmega.dir/f_jmp_memc.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_memc.c -o CMakeFiles/atmega.dir/f_jmp_memc.c.s
 
 CMakeFiles/atmega.dir/f_jmp_memc.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/atmega.dir/f_jmp_memc.c.o.provides.build: CMakeFiles/atmega.dir/f_jmp
 
 CMakeFiles/atmega.dir/f_jmp_rel.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/f_jmp_rel.c.o: ../f_jmp_rel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/atmega.dir/f_jmp_rel.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_jmp_rel.c.o   -c /Users/patryk/CLionProjects/atmega/f_jmp_rel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/atmega.dir/f_jmp_rel.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/f_jmp_rel.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_rel.c
 
 CMakeFiles/atmega.dir/f_jmp_rel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/f_jmp_rel.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/f_jmp_rel.c > CMakeFiles/atmega.dir/f_jmp_rel.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_rel.c > CMakeFiles/atmega.dir/f_jmp_rel.c.i
 
 CMakeFiles/atmega.dir/f_jmp_rel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/f_jmp_rel.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/f_jmp_rel.c -o CMakeFiles/atmega.dir/f_jmp_rel.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/f_jmp_rel.c -o CMakeFiles/atmega.dir/f_jmp_rel.c.s
 
 CMakeFiles/atmega.dir/f_jmp_rel.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/atmega.dir/f_jmp_rel.c.o.provides.build: CMakeFiles/atmega.dir/f_jmp_
 
 CMakeFiles/atmega.dir/interpreter.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/interpreter.c.o: ../interpreter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/atmega.dir/interpreter.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/interpreter.c.o   -c /Users/patryk/CLionProjects/atmega/interpreter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/atmega.dir/interpreter.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/interpreter.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/interpreter.c
 
 CMakeFiles/atmega.dir/interpreter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/interpreter.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/interpreter.c > CMakeFiles/atmega.dir/interpreter.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/interpreter.c > CMakeFiles/atmega.dir/interpreter.c.i
 
 CMakeFiles/atmega.dir/interpreter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/interpreter.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/interpreter.c -o CMakeFiles/atmega.dir/interpreter.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/interpreter.c -o CMakeFiles/atmega.dir/interpreter.c.s
 
 CMakeFiles/atmega.dir/interpreter.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/atmega.dir/interpreter.c.o.provides.build: CMakeFiles/atmega.dir/inte
 
 CMakeFiles/atmega.dir/interrupt.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/interrupt.c.o: ../interrupt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/atmega.dir/interrupt.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/interrupt.c.o   -c /Users/patryk/CLionProjects/atmega/interrupt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/atmega.dir/interrupt.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/interrupt.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/interrupt.c
 
 CMakeFiles/atmega.dir/interrupt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/interrupt.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/interrupt.c > CMakeFiles/atmega.dir/interrupt.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/interrupt.c > CMakeFiles/atmega.dir/interrupt.c.i
 
 CMakeFiles/atmega.dir/interrupt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/interrupt.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/interrupt.c -o CMakeFiles/atmega.dir/interrupt.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/interrupt.c -o CMakeFiles/atmega.dir/interrupt.c.s
 
 CMakeFiles/atmega.dir/interrupt.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/atmega.dir/interrupt.c.o.provides.build: CMakeFiles/atmega.dir/interr
 
 CMakeFiles/atmega.dir/main.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/atmega.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/main.c.o   -c /Users/patryk/CLionProjects/atmega/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/atmega.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/main.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/main.c
 
 CMakeFiles/atmega.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/main.c > CMakeFiles/atmega.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/main.c > CMakeFiles/atmega.dir/main.c.i
 
 CMakeFiles/atmega.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/main.c -o CMakeFiles/atmega.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/main.c -o CMakeFiles/atmega.dir/main.c.s
 
 CMakeFiles/atmega.dir/main.c.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/atmega.dir/main.c.o.provides.build: CMakeFiles/atmega.dir/main.c.o
 
 CMakeFiles/atmega.dir/mem_abs.c.o: CMakeFiles/atmega.dir/flags.make
 CMakeFiles/atmega.dir/mem_abs.c.o: ../mem_abs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/atmega.dir/mem_abs.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/mem_abs.c.o   -c /Users/patryk/CLionProjects/atmega/mem_abs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/atmega.dir/mem_abs.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmega.dir/mem_abs.c.o   -c /Users/patryk/Documents/GitHub/virtual-processor/mem_abs.c
 
 CMakeFiles/atmega.dir/mem_abs.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmega.dir/mem_abs.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/CLionProjects/atmega/mem_abs.c > CMakeFiles/atmega.dir/mem_abs.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/patryk/Documents/GitHub/virtual-processor/mem_abs.c > CMakeFiles/atmega.dir/mem_abs.c.i
 
 CMakeFiles/atmega.dir/mem_abs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmega.dir/mem_abs.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/CLionProjects/atmega/mem_abs.c -o CMakeFiles/atmega.dir/mem_abs.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/patryk/Documents/GitHub/virtual-processor/mem_abs.c -o CMakeFiles/atmega.dir/mem_abs.c.s
 
 CMakeFiles/atmega.dir/mem_abs.c.o.requires:
 
@@ -273,7 +273,7 @@ atmega: CMakeFiles/atmega.dir/main.c.o
 atmega: CMakeFiles/atmega.dir/mem_abs.c.o
 atmega: CMakeFiles/atmega.dir/build.make
 atmega: CMakeFiles/atmega.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable atmega"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable atmega"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atmega.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -297,6 +297,6 @@ CMakeFiles/atmega.dir/clean:
 .PHONY : CMakeFiles/atmega.dir/clean
 
 CMakeFiles/atmega.dir/depend:
-	cd /Users/patryk/CLionProjects/atmega/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/patryk/CLionProjects/atmega /Users/patryk/CLionProjects/atmega /Users/patryk/CLionProjects/atmega/cmake-build-debug /Users/patryk/CLionProjects/atmega/cmake-build-debug /Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/patryk/Documents/GitHub/virtual-processor /Users/patryk/Documents/GitHub/virtual-processor /Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug /Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug /Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/atmega.dir/depend
 

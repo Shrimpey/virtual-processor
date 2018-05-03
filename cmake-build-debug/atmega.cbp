@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/patryk/CLionProjects/atmega/cmake-build-debug"/>
+				<Option working_dir="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/patryk/CLionProjects/atmega/cmake-build-debug"/>
+				<Option working_dir="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/patryk/CLionProjects/atmega/cmake-build-debug"/>
+				<Option working_dir="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="atmega">
-				<Option output="/Users/patryk/CLionProjects/atmega/cmake-build-debug/atmega" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/patryk/CLionProjects/atmega/cmake-build-debug"/>
+				<Option output="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/atmega" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 atmega"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 atmega"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="atmega/fast">
-				<Option output="/Users/patryk/CLionProjects/atmega/cmake-build-debug/atmega" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/patryk/CLionProjects/atmega/cmake-build-debug"/>
+				<Option output="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/atmega" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,50 +69,50 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 atmega/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/CLionProjects/atmega/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 atmega/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/f_add1.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/f_add1.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/f_add2.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/f_add2.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/f_jmp_memc.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/f_jmp_memc.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/f_jmp_rel.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/f_jmp_rel.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/interpreter.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/interpreter.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/interpreter.h">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/interpreter.h">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/interrupt.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/interrupt.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/interrupt.h">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/interrupt.h">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/main.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/main.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/mem_abs.c">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/mem_abs.c">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/mem_abs.h">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/mem_abs.h">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/types.h">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/types.h">
 			<Option target="atmega"/>
 		</Unit>
-		<Unit filename="/Users/patryk/CLionProjects/atmega/CMakeLists.txt">
+		<Unit filename="/Users/patryk/Documents/GitHub/virtual-processor/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

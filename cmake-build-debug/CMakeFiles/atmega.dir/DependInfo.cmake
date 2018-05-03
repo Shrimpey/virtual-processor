@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/patryk/CLionProjects/atmega/f_add1.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/f_add1.c.o"
-  "/Users/patryk/CLionProjects/atmega/f_add2.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/f_add2.c.o"
-  "/Users/patryk/CLionProjects/atmega/f_jmp_memc.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/f_jmp_memc.c.o"
-  "/Users/patryk/CLionProjects/atmega/f_jmp_rel.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/f_jmp_rel.c.o"
-  "/Users/patryk/CLionProjects/atmega/interpreter.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/interpreter.c.o"
-  "/Users/patryk/CLionProjects/atmega/interrupt.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/interrupt.c.o"
-  "/Users/patryk/CLionProjects/atmega/main.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/main.c.o"
-  "/Users/patryk/CLionProjects/atmega/mem_abs.c" "/Users/patryk/CLionProjects/atmega/cmake-build-debug/CMakeFiles/atmega.dir/mem_abs.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/f_add1.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/f_add1.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/f_add2.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/f_add2.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/f_jmp_memc.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/f_jmp_memc.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/f_jmp_rel.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/f_jmp_rel.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/interpreter.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/interpreter.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/interrupt.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/interrupt.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/main.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/main.c.o"
+  "/Users/patryk/Documents/GitHub/virtual-processor/mem_abs.c" "/Users/patryk/Documents/GitHub/virtual-processor/cmake-build-debug/CMakeFiles/atmega.dir/mem_abs.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
