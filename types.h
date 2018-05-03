@@ -6,7 +6,6 @@ typedef unsigned char               DataType;
 typedef unsigned short              CodeType;
 typedef unsigned short              AddressType;
 typedef unsigned long               CounterType;
-
 //najwieksze wartosci
 #define MAX_ADDRESS                 0xFFFF
 #define MAX_DATA_VAL                0xFF
