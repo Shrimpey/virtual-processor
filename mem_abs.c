@@ -151,9 +151,11 @@ void setRegister(int n, DataType v){
 }
 void setFlagsRegister(int b){
     FLAGS = FLAGS | (1<<b);
+    MEMD[SREG_ADDRESS] = FLAGS;
 }
 void resetFlagsRegister(int b){
     FLAGS = FLAGS & (~(1<<b));
+    MEMD[SREG_ADDRESS] = FLAGS;
 }
 int getFlagsRegister(int b){
     return FLAGS & (1<<b);
