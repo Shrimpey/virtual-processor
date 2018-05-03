@@ -14,6 +14,7 @@
 void F_MOV1(void);
 void F_FMUL(void);
 void F_FMULS(void);
+void F_FMULSU(void);
 
 //wzorce opcodow
 //#define ID_ADD_R1_R2            0x0C
@@ -23,6 +24,7 @@ void F_FMULS(void);
 #define ID_MOV_R1_R2            0x2C
 #define ID_FMUL                 0x0D
 #define ID_FMULS                0x0E
+#define ID_FMULSU               0x0C
 
 
 void doInstr(CodeType T){
@@ -32,6 +34,8 @@ void doInstr(CodeType T){
         F_FMUL();   //wywolac instrukcje FMUL
     }else if( (((T & 0xFF80)>>6) | ((T & 0x0008)>>3)) == ID_FMULS){
         F_FMULS();   //wywolac instrukcje FMULS
+    }else if( (((T & 0xFF80)>>6) | ((T & 0x0008)>>3)) == ID_FMULSU){
+        F_FMULSU();   //wywolac instrukcje FMULSU
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();
