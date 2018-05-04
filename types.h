@@ -19,6 +19,7 @@ typedef unsigned long               CounterType;
 #define MAX_EIO_REGISTERS           EIO_REGISTERS_COUNT-1
 
 #define SREG_ADDRESS                0x5F
+#define RAMPZ_ADRESS                0x3B
 
 //Znaczenie flag
 #define FLAG_C                      0x00
