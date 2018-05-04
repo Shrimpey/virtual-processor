@@ -24,7 +24,7 @@ void F_FMULSU(void);
 #define ID_MOV_R1_R2            0x2C
 #define ID_FMUL                 0x0D
 #define ID_FMULS                0x0E
-#define ID_FMULSU               0x0C
+#define ID_FMULSU               0x0F
 
 
 void doInstr(CodeType T){
