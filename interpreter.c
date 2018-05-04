@@ -25,11 +25,12 @@ void F_LDI();
 #define ID_MOV_R1_R2            0x2C
 #define ID_FMUL                 0x0D
 #define ID_FMULS                0x0E
-#define ID_FMULSU               0x0C
+#define ID_FMULSU               0x0F
 #define ID_ELPM_NOARG           0x95C8
 #define ID_ELPM_ARG1            0x9004
 #define ID_ELPM_ARG2            0x9005
 #define ID_LDI                  0xE
+
 
 
 void doInstr(CodeType T){
