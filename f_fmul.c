@@ -11,7 +11,7 @@ void F_FMUL(void){
     printf("0x%04X[0x%04X]: FMUL R%d, R%d\n", getPC(), getOpcode(), R1, R2);
 
     CodeType result = getRegister(R1) * getRegister(R2);
-
+    
     setRegister(0x01, (result << 1) & 0x00FF);       //Ustawienie bitu niskiego
     setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);       //Ustawienie bitu wysokiego
 
