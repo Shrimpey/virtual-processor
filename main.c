@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "types.h"
 #include "mem_abs.h"
@@ -20,7 +21,13 @@ int main(int argc, char *argv[]) {
 
     loadMEMC(FILE_CODE);                //�adowanie pami�ci kodu z pliku
     loadMEMD(FILE_DATA);                //�adowanie pami�ci danych z pliku (w tym rejestr�wm)
-    loadPC(FILE_PC);                    //�adowanie warto�ci PC
+    //sprawdzenie czy w drugim lub trzecim argumencie występuje zerowanie PC
+    if(strcmp(argv[2], "zeroPC")==0 || strcmp(argv[3], "zeroPC")==0){
+      printf("PC SET TO 0 \n");
+      setPC(0);
+    }else
+      loadPC(FILE_PC);                    //�adowanie warto�ci PC
+
     loadCounter(FILE_COUNTER);          //�adowanie licznika cykli
 
     dumpMEMConfiguration();
