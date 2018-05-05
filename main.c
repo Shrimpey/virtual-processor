@@ -25,8 +25,9 @@ int main(int argc, char *argv[]) {
     if(strcmp(argv[2], "zeroPC")==0 || strcmp(argv[3], "zeroPC")==0){
       printf("PC SET TO 0 \n");
       setPC(0);
-    }else
+    }else{
       loadPC(FILE_PC);                    //�adowanie warto�ci PC
+    }
 
     loadCounter(FILE_COUNTER);          //�adowanie licznika cykli
 

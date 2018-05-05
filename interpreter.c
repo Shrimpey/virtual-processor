@@ -16,10 +16,6 @@ void F_FMUL(void);
 void F_FMULS(void);
 void F_FMULSU(void);
 void F_LDI();
-void F_ELPM_NOARG();
-void F_ELPM_ARG1();
-void F_ELPM_ARG2();
-void F_OUT();
 
 //wzorce opcodow
 //#define ID_ADD_R1_R2            0x0C
@@ -30,11 +26,7 @@ void F_OUT();
 #define ID_FMUL                 0x0D
 #define ID_FMULS                0x0E
 #define ID_FMULSU               0x0F
-#define ID_ELPM_NOARG           0x95C8
-#define ID_ELPM_ARG1            0x9004
-#define ID_ELPM_ARG2            0x9005
 #define ID_LDI                  0xE
-#define ID_OUT                  0x17
 
 
 
@@ -47,19 +39,9 @@ void doInstr(CodeType T){
         F_FMULS();   //wywolac instrukcje FMULS
     }else if( (((T & 0xFF80)>>6) | ((T & 0x0008)>>3)) == ID_FMULSU){
         F_FMULSU();   //wywolac instrukcje FMULSU
-    }else if(T == ID_ELPM_NOARG){
-        F_ELPM_NOARG();
-    }else if(T & (0x7F<<9 | 0xF) == ID_ELPM_ARG1){
-        F_ELPM_ARG1();
-    }else if(T & (0x7F<<9 | 0xF) == ID_ELPM_ARG2){
-        F_ELPM_ARG2();
     }else if(((T & 0xF000) >> 12) == ID_LDI){
         F_LDI();
-    }else if((T&0xF800) >> 11 == ID_OUT){
-        F_OUT();
-    }
-
-    else{
+    }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();
         exit(-1);
