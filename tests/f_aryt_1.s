@@ -3,15 +3,17 @@
 .type	main, @function
 
 main:
-	fmul r20, r20
+	ldi r16, 0x20
+	ldi r17, 0xE0
+	fmul r16, r16
 	mov r2, r0
 	mov r3, r1
-	fmuls r21, r21
+	fmuls r17, r17
 	mov r4, r0
 	mov r5, r1
-	fmulsu r21, r20
+	fmulsu r17, r16
 	mov r6, r0
 	mov r7, r1
-	fmulsu r20, r21
+	fmulsu r16, r17
 	mov r8, r0
 	mov r9, r1
