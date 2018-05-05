@@ -10,9 +10,11 @@ void F_FMULSU(void){
 
     printf("0x%04X[0x%04X]: FMULSU R%d, R%d\n", getPC(), getOpcode(), R1, R2);
 
-    DataType R2_pp = ((getRegister(R2) & 0x80) == 0x80) ? (~(getRegister(R2) - 1)) : (getRegister(R2));     //Przejscie z U2
+    DataType R1_pp = ((getRegister(R1) & 0x80) == 0x80) ? (~(getRegister(R1) - 1)) : (getRegister(R1));     //Przejscie z U2
 
-    CodeType result = R2_pp * getRegister(R1);    //Obliczenie wyniku
+    CodeType result = R1_pp * getRegister(R2);    //Obliczenie wyniku
+
+    result = ((getRegister(R1) & 0x80) == 0x80) ? (~result + 1) : (result);
 
     setRegister(0x01, (result << 1) & 0x00FF);       //Ustawienie bitu niskiego
     setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);       //Ustawienie bitu wysokiego
