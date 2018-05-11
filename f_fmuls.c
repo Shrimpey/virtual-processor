@@ -31,5 +31,5 @@ void F_FMULS(void){
     }
 
     setPC(getPC()+1);                                       //zwiekszenie licznika rozkazow
-    addCounter(1);
+    addCounter(2);
 }
