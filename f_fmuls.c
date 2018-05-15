@@ -14,9 +14,10 @@ void F_FMULS(void){
     DataType R2_pp = ((getRegister(R2) & 0x80) == 0x80) ? (~(getRegister(R2) - 1)) : (getRegister(R2));
 
     CodeType result = R1_pp * R2_pp;    //Obliczenie wyniku
+    result = (((getRegister(R1) & 0x80) ^ (getRegister(R2) & 0x80)) == 0x80) ? (~result + 1) : (result);    //Przejscie do U2
 
-    setRegister(0x01, (result << 1) & 0x00FF);       //Ustawienie bitu niskiego
-    setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);       //Ustawienie bitu wysokiego
+    setRegister(0x01, (result << 1) & 0x00FF);              //Ustawienie bitu niskiego
+    setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);      //Ustawienie bitu wysokiego
 
     if((result & 0x8000) == 0x8000){
         setFlagsRegister(FLAG_C);       //Ustawienie flagi przeniesienia
@@ -30,6 +31,6 @@ void F_FMULS(void){
         resetFlagsRegister(FLAG_Z);     //Zresetowanie flagi zero
     }
 
-    setPC(getPC()+1);                                       //zwiekszenie licznika rozkazow
-    addCounter(2);
+    setPC(getPC()+1);                   //zwiekszenie licznika rozkazow
+    addCounter(2);                      //FMULS zajmuje 2 cykle
 }
