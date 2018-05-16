@@ -16,6 +16,8 @@ void F_FMULS(void);
 void F_FMULSU(void);
 void F_LDI();
 void F_JMP_REL(void);
+void F_IJMP(void);
+void F_LDD(void);
 
 //wzorce opcodow
 //#define ID_ADD_R1_R2            0x0C
@@ -27,6 +29,7 @@ void F_JMP_REL(void);
 #define ID_FMULSU               0x0F
 #define ID_LDI                  0xE
 #define ID_JMP_REL              0xC
+#define ID_LDD                  0x11
 
 
 
@@ -43,6 +46,10 @@ void doInstr(CodeType T){
         F_FMULSU();   //wywolac instrukcje FMULSU
     }else if(((T & 0xF000) >> 12) == ID_LDI){
         F_LDI();
+    }else if( T == 0x9409 ){
+        F_IJMP();
+    }else if ((T & 0xD308) == ID_LDD){
+        F_LDD();
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();
