@@ -150,6 +150,22 @@ DataType getRegister(int n){
 void setRegister(int n, DataType v){
     GEN_REG[n]=v;
 }
+DataType getIORegister(int n){
+    return IO_REG[n];
+}
+DataType getMEMCData(unsigned long n){
+    //pamiec MEMC jest podzielna na wyrazy po 16 bitow, najmniej znaczacy bit oznacza wyzszy lub nizszy bajt w wyrazie
+    short LSB = n & 0x1;
+    n = n>>1;
+    CodeType data = getMEMC(n);
+    if(LSB){
+      return data>>8;
+    }else
+      return data&0xff;
+}
+void setIORegister(int n, DataType v){
+    IO_REG[n]=v;
+}
 void setFlagsRegister(int b){
     FLAGS = FLAGS | (1<<b);
     MEMD[SREG_ADDRESS] = FLAGS;

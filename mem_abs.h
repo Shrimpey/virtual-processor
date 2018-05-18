@@ -27,7 +27,9 @@ void addCounter(CounterType n);
 
 DataType getRegister(int n);
 void setRegister(int n, DataType v);
-
+DataType getIORegister(int n);
+void setIORegister(int n, DataType v);
+DataType getMEMCData(long n);
 void setFlagsRegister(int b);
 void resetFlagsRegister(int b);
 int getFlagsRegister(int b);
