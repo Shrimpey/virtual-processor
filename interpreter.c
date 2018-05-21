@@ -48,7 +48,7 @@ void doInstr(CodeType T){
         F_LDI();
     }else if( T == 0x9409 ){
         F_IJMP();
-    }else if ((T & 0xD308) == ID_LDD){
+    }else if ((((T & 0xC000) >> 11) | ((T & 0x1000) >> 10) | ((T & 0x0200) >> 8) | ((T & 0x0008) >> 3)) == ID_LDD){
         F_LDD();
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
