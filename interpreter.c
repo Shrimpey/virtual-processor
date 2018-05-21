@@ -18,6 +18,7 @@ void F_LDI();
 void F_JMP_REL(void);
 void F_IJMP(void);
 void F_LDD(void);
+void F_STD(void);
 
 //wzorce opcodow
 //#define ID_ADD_R1_R2            0x0C
@@ -30,7 +31,7 @@ void F_LDD(void);
 #define ID_LDI                  0xE
 #define ID_JMP_REL              0xC
 #define ID_LDD                  0x11
-
+#define ID_STD                  0x13
 
 
 void doInstr(CodeType T){
@@ -50,6 +51,8 @@ void doInstr(CodeType T){
         F_IJMP();
     }else if ((((T & 0xC000) >> 11) | ((T & 0x1000) >> 10) | ((T & 0x0200) >> 8) | ((T & 0x0008) >> 3)) == ID_LDD){
         F_LDD();
+    }else if ((((T & 0xC000) >> 11) | ((T & 0x1000) >> 10) | ((T & 0x0200) >> 8) | ((T & 0x0008) >> 3)) == ID_STD){
+        F_STD();
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();
