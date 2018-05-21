@@ -3,7 +3,7 @@
 .type	main, @function
 
 main:
-	ldi r16, 0x00
+	ldi r16, 0x01
 	ldi r17, 0x00
 	fmul r16, r17
 	mov r2, r0

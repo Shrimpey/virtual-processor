@@ -22,13 +22,35 @@ int main(int argc, char *argv[]) {
     loadMEMC(FILE_CODE);                //�adowanie pami�ci kodu z pliku
     loadMEMD(FILE_DATA);                //�adowanie pami�ci danych z pliku (w tym rejestr�wm)
     //sprawdzenie czy w drugim lub trzecim argumencie występuje zerowanie PC
-    if(strcmp(argv[1], "zeroPC")==0 || strcmp(argv[2], "zeroPC")==0 || strcmp(argv[3], "zeroPC")==0){
-      printf("PC SET TO 0 \n");
-      if(getPC != 0){
-          setPC(0);
-      }
+    if(argc > 3){
+        if(strcmp(argv[3], "zeroPC")==0){
+            printf("PC SET TO 0 \n");
+            if(getPC != 0){
+                setPC(0);
+            }
+        }else{
+            loadPC(FILE_PC);
+        }
+    }else if(argc > 2){
+        if(strcmp(argv[2], "zeroPC")==0){
+            printf("PC SET TO 0 \n");
+            if(getPC != 0){
+                setPC(0);
+            }
+        }else{
+            loadPC(FILE_PC);
+        }
+    }else if(argc > 1){
+        if(strcmp(argv[1], "zeroPC")==0){
+            printf("PC SET TO 0 \n");
+            if(getPC != 0){
+                setPC(0);
+            }
+        }else{
+            loadPC(FILE_PC);
+        }
     }else{
-      loadPC(FILE_PC);                    //�adowanie warto�ci PC
+        loadPC(FILE_PC);    //Ladowanie wartosci PC
     }
 
     loadCounter(FILE_COUNTER);          //�adowanie licznika cykli
@@ -36,14 +58,18 @@ int main(int argc, char *argv[]) {
     dumpMEMConfiguration();
 
     if(argc>1){	                        //pierwszy parametr wywolania okresla liczbe instrukcji do wykonania
-        max_counter=strtoul(argv[1], NULL, 10);
-        max_counter+=getCounter();
+        if(strcmp(argv[1], "zeroPC") != 0){
+            max_counter=strtoul(argv[1], NULL, 10);
+            max_counter+=getCounter();
+        }
     }
     if(max_counter==0){
         max_counter=getCounter()+1;     //nie podanie argumentu wywolania lub b�edne jego podanie - ustala wykonanie jednego cyklu
     }
     if(argc>2){                         //drugi parametr wywolania okresla liczbe instrukcji po ktorych ma byc wygenerowane przerwanie
-        int_gen=strtoul(argv[2], NULL, 10);
+        if(strcmp(argv[2], "zeroPC") != 0){
+            int_gen=strtoul(argv[2], NULL, 10);
+        }
     }
     if(int_gen==0){
         int_gen=-1;                     //nie podanie argumentu wywolania lub b�edne jego podanie - ustala wykonanie jednej instrukcji

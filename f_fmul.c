@@ -12,8 +12,8 @@ void F_FMUL(void){
 
     CodeType result = getRegister(R1) * getRegister(R2);
 
-    setRegister(0x01, (result << 1) & 0x00FF);       //Ustawienie bitu niskiego
-    setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);       //Ustawienie bitu wysokiego
+    setRegister(0x01, (result << 1) & 0x00FF);          //Ustawienie bitu niskiego
+    setRegister(0x00, ( (result << 1) & 0xFF00) >> 8);  //Ustawienie bitu wysokiego
 
     if((result & 0x8000) == 0xFFFF){
         setFlagsRegister(FLAG_C);       //Ustawienie flagi przeniesienia
@@ -27,6 +27,6 @@ void F_FMUL(void){
         resetFlagsRegister(FLAG_Z);     //Zresetowanie flagi zero
     }
 
-    setPC(getPC()+1);                                       //zwiekszenie licznika rozkazow
-    addCounter(2);
+    setPC(getPC()+1);                    //zwiekszenie licznika rozkazow
+    addCounter(2);                       //FMUL zajmuje 2 cykle
 }

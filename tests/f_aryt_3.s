@@ -4,7 +4,7 @@
 
 main:
 	ldi r16, 0x00
-	ldi r17, 0x00
+	ldi r17, 0x01
 	fmul r16, r17
 	mov r2, r0
 	mov r3, r1
