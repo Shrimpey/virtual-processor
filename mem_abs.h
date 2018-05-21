@@ -32,5 +32,5 @@ void setFlagsRegister(int b);
 void resetFlagsRegister(int b);
 int getFlagsRegister(int b);
 void saveCPUState(void);
-
+void setMEMD(AddressType p, DataType i);  //Dopisana na potrzeby STD
 #endif //__MEM_ABS_H__

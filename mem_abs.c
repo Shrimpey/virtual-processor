@@ -166,3 +166,8 @@ void saveCPUState(void){
     savePC(FILE_PC);            //Zapisz warto�c PC
     saveCounter(FILE_COUNTER);  //Zapisz liczbe wykonanych cykli
 }
+
+
+void setMEMD(AddressType p, DataType i){    //Dopisana na potrzeby STD
+    MEMD[p]=i;
+}
