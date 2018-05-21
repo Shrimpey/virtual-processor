@@ -7,9 +7,6 @@
 #include "interrupt.h"
 
 //naglowki poszczegolnych opcodow
-//void F_ADD1(void);
-//void F_ADD2(void);
-//void F_JMP_MEMC(void);
 void F_MOV1(void);
 void F_FMUL(void);
 void F_FMULS(void);
@@ -18,11 +15,10 @@ void F_LDI();
 void F_JMP_REL(void);
 void F_OUT(void);
 void F_ELPM_ARG1();
+void F_ELPM_ARG2();
+void F_ELPM_NOARG();
 
 //wzorce opcodow
-//#define ID_ADD_R1_R2            0x0C
-//#define ID_ADD_R1_MEM_R2        0x02
-//#define ID_JMP_MEMC             0x03
 #define ID_MOV_R1_R2            0x2C
 #define ID_FMUL                 0x0D
 #define ID_FMULS                0x0E
@@ -31,6 +27,8 @@ void F_ELPM_ARG1();
 #define ID_OUT                  0x17
 #define ID_JMP_REL              0xC
 #define ID_ELPM_ARG1            0x9006
+#define ID_ELPM_ARG2            0x9007
+#define ID_ELPM_NOARG           0x95D8
 
 
 
@@ -50,8 +48,11 @@ void doInstr(CodeType T){
     }else if(((T & (0xF800))>>11) == ID_OUT){
         F_OUT();
     }else if((T & (0xFE0F)) == ID_ELPM_ARG1){
-        //printf("%x", )
         F_ELPM_ARG1();
+    }else if((T & (0xFE0F)) == ID_ELPM_ARG2){
+        F_ELPM_ARG2();
+    }else if(T  == ID_ELPM_NOARG){
+        F_ELPM_NOARG();
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();

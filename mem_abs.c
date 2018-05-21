@@ -17,7 +17,7 @@
 #define FILE_DATA               "file_data.bin"
 #define FILE_CODE               "file_code.bin"
 
-CodeType    MEMC[MAX_ADDRESS+1];    //obszar pami�ci kodu
+CodeType    MEMC[MAX_ADDRESS_MEMC+1];    //obszar pami�ci kodu
 DataType    MEMD[MAX_ADDRESS+1];    //obszar pami�ci danych
 DataType    *GEN_REG=(DataType*)(&(MEMD[GEN_REGISTERS_IN_MEMD_OFFSET]));    //deklaracja miejsca przechowywania rejestr�w ogolnego przeznaczenia
 DataType    *IO_REG=(DataType*)(&(MEMD[IO_REGISTERS_IN_MEMD_OFFSET]));      //deklaracja miejsca przechowywania rejestr�w IO
@@ -72,7 +72,7 @@ void loadMEMC(char *file){          //�adowanie pami�ci kodu z pliku
         exit(-3);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    printf("Read MEMC (%s) file in %ld bytes\n", file, read(file_ptr, (void*)MEMC, MAX_ADDRESS+1));
+    printf("Read MEMC (%s) file in %ld bytes\n", file, read(file_ptr, (void*)MEMC, MAX_ADDRESS_MEMC+1));
     close(file_ptr);
 }
 void loadMEMD(char *file){        //�adowanie pami�ci danych z pliku
@@ -126,6 +126,10 @@ CodeType getMEMC(AddressType p){
     CodeType t=MEMC[p];
     return t;
 }
+CodeType getExtendedMEMC(ExtAdressType p){
+  CodeType t=MEMC[p];
+  return t;
+}
 DataType getMEMD(AddressType p){
     return MEMD[p];
 }
@@ -153,15 +157,15 @@ void setRegister(int n, DataType v){
 DataType getIORegister(int n){
     return IO_REG[n];
 }
-DataType getMEMCData(unsigned long n){
+DataType getMEMCData(ExtAdressType n){
     //pamiec MEMC jest podzielna na wyrazy po 16 bitow, najmniej znaczacy bit oznacza wyzszy lub nizszy bajt w wyrazie
     short LSB = n & 0x1;
     n = n>>1;
-    CodeType data = getMEMC(n);
+    CodeType data = getExtendedMEMC(n);
     if(LSB){
-      return data>>8;
-    }else
       return data&0xff;
+    }else
+      return data>>8;
 }
 void setIORegister(int n, DataType v){
     IO_REG[n]=v;

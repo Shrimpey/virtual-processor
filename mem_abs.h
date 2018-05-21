@@ -16,6 +16,7 @@ void saveCounter(char *file);
 void loadCounter(char *file);
 
 CodeType getMEMC(AddressType p);
+CodeType getExtendedMEMC(ExtAdressType p);
 DataType getMEMD(AddressType p);
 
 void setPC(AddressType v);
