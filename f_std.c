@@ -11,8 +11,8 @@ void F_STD(void) {
 
     // lokalizacja rejestru
     DataType Rr = ((getOpcode() & 0x0100) | (getOpcode() & 0x00F0));
-    // wczytanie r28
-    DataType Y = getRegister(0x1C);
+    // wczytanie adresu Y
+    AddressType Y = (getRegister(YL_ADRESS) << 4) | getRegister(YH_ADRESS);
     // wartość przesuniecie
     DataType Q = ((getOpcode() & 0x2000) | (getOpcode() & 0x0F00) | (getOpcode() & 0x0007));
 

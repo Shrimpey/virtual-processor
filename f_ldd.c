@@ -12,7 +12,7 @@ void F_LDD(void){
     // lokalizacja rejestru
     DataType Rd = ((getOpcode() & 0x0100) >> 4 | (getOpcode() & 0x00F0) >>4);
     // wczytanie r28
-    DataType Y  = getRegister(0x1C);
+    AddressType Y = (getRegister(YL_ADRESS) << 4) | getRegister(YH_ADRESS);
     // wartość przesuniecie
     DataType Q  = ((getOpcode() & 0x2000)>>8 | (getOpcode() & 0x0C00)>>7 | (getOpcode() & 0x0007));
 
