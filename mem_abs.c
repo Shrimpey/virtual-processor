@@ -130,6 +130,9 @@ CodeType getExtendedMEMC(ExtAdressType p){
   CodeType t=MEMC[p];
   return t;
 }
+void setMEMD(int n, DataType v){
+    MEMD[n]=v;
+}
 DataType getMEMD(AddressType p){
     return MEMD[p];
 }
@@ -185,9 +188,4 @@ void saveCPUState(void){
     saveMEMD(FILE_DATA);        //Zapisz zawarto�� pami�ci danych do pliku
     savePC(FILE_PC);            //Zapisz warto�c PC
     saveCounter(FILE_COUNTER);  //Zapisz liczbe wykonanych cykli
-}
-
-
-void setMEMD(AddressType p, DataType i){    //Dopisana na potrzeby STD
-    MEMD[p]=i;
 }
