@@ -5,7 +5,7 @@ for file in *.s; do
     echo "Processing  $file..."
     $PWD/make-test.sh -f "${file%$".s"}"
     cd ..
-    $PWD/syko.exe 20 20 zeroPC
+    $PWD/syko.exe 30 30 zeroPC
     cd tests
     cp $PWD/../file_data.bin $PWD/"binary data"/${file%$".s"}_out.bin
     echo ""
