@@ -22,6 +22,8 @@ typedef unsigned long               CounterType;
 
 #define SREG_ADDRESS                0x5F
 #define RAMPZ_ADRESS                0x3B
+#define YL_ADRESS                   0x1C
+#define YH_ADRESS                   0x1D
 #define ZL_ADRESS                   0x1E
 #define ZH_ADRESS                   0x1F
 

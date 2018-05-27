@@ -17,3 +17,12 @@ _P.S. do tego potrzebne sa komendy avr, nie pamietam czy one sa z arduino czy ja
 
 ### Uzywanie skryptu compare.sh:
 1. Uruchamiamy "./compare.sh" w folderze "binary data" i zostaja utworzone po dwa pliki do kazdego testu - .dec i .hex, stanowia one porownanie danych w dec i hex
+
+## Uzywanie skryptu test-all.sh
+Skrypt który dla każdego pliku testowego (z rozszerzeniem .s) w folderze /tests/ powoduje:
+1. Uruchomienie skryptu make-test.sh, a co za tym idzie utworzenie odpowiednich plików binarnych
+2. Wywołanie programu syko.exe z argumentami 30 30 zeroPC
+3. Skopiowanie danych wyjściowych (file_data.bin) do folderu /tests/binary data z odpowiednią nazwą
+Następnie uruchamiany jest skrypt compare.sh
+
+Żeby go uruchomic należy wpisać w terminalu ". ./test-all.sh", koniecznie z kropką na początku z poziomu folderu /tests/
