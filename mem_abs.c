@@ -12,6 +12,7 @@
 #define GEN_REGISTERS_IN_MEMD_OFFSET    0x0000
 #define IO_REGISTERS_IN_MEMD_OFFSET     GEN_REGISTERS_IN_MEMD_OFFSET+REGISTERS_COUNT
 #define EIO_REGISTERS_IN_MEMD_OFFSET    IO_REGISTERS_IN_MEMD_OFFSET+IO_REGISTERS_COUNT
+#define INTERNAL_SRAM_OFFSET            EIO_REGISTERS_IN_MEMD_OFFSET+EIO_REGISTERS_COUNT
 #define FILE_COUNTER            "file_counter.bin"
 #define FILE_PC                 "file_pc.bin"
 #define FILE_DATA               "file_data.bin"
@@ -22,6 +23,7 @@ DataType    MEMD[MAX_ADDRESS+1];    //obszar pami�ci danych
 DataType    *GEN_REG=(DataType*)(&(MEMD[GEN_REGISTERS_IN_MEMD_OFFSET]));    //deklaracja miejsca przechowywania rejestr�w ogolnego przeznaczenia
 DataType    *IO_REG=(DataType*)(&(MEMD[IO_REGISTERS_IN_MEMD_OFFSET]));      //deklaracja miejsca przechowywania rejestr�w IO
 DataType    *EIO_REG=(DataType*)(&(MEMD[EIO_REGISTERS_IN_MEMD_OFFSET]));    //deklaracja miejsca przechowywania rejestr�w EIO
+DataType    *INTERNAL_SRAM=(DataType*)(&(MEMD[INTERNAL_SRAM_OFFSET]));
 
 AddressType   PC;                   //licznik rozkaz�w
 DataType    FLAGS;                  //flagi procesora
@@ -48,7 +50,9 @@ void loadPC(char *file){          //�adowanie nowej warto�ci PC
     }
     lseek(file_ptr, 0, SEEK_SET);
     printf("Read PC file (%s) in %ld bytes ", file, read(file_ptr, &tPC, sizeof(AddressType)));
-    PC=(tPC & 0xFF00)>>8 | (tPC & 0x00FF)<<8;    //Endianess correction
+    //TODO poprawic to
+    PC = tPC;
+    //PC=(tPC & 0xFF00)>>8 | (tPC & 0x00FF)<<8;    //Endianess correction
     printf("[PC=0x%04X]\n", PC);
     close(file_ptr);
 }
@@ -95,7 +99,9 @@ void savePC(char *file){        //Zapisz warto�c PC
         exit(-5);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    tPC=(PC & 0xFF00)>>8 | (PC & 0x00FF)<<8;		//Endianess correction
+    //TODO poprawic to
+    //tPC=(PC & 0xFF00)>>8 | (PC & 0x00FF)<<8;		//Endianess correction
+    tPC = PC;
     printf("Write PC (%s) file in %ld bytes [PC=0x%04X]\n", file, write(file_ptr, &tPC, sizeof(AddressType)), PC);
     close(file_ptr);
 }
@@ -126,10 +132,6 @@ CodeType getMEMC(AddressType p){
     CodeType t=MEMC[p];
     return t;
 }
-CodeType getExtendedMEMC(ExtAdressType p){
-  CodeType t=MEMC[p];
-  return t;
-}
 DataType getMEMD(AddressType p){
     return MEMD[p];
 }
@@ -157,11 +159,11 @@ void setRegister(int n, DataType v){
 DataType getIORegister(int n){
     return IO_REG[n];
 }
-DataType getMEMCData(ExtAdressType n){
+DataType getMEMCData(AddressType n){
     //pamiec MEMC jest podzielna na wyrazy po 16 bitow, najmniej znaczacy bit oznacza wyzszy lub nizszy bajt w wyrazie
     short LSB = n & 0x1;
     n = n>>1;
-    CodeType data = getExtendedMEMC(n);
+    CodeType data = getMEMC(n);
     if(LSB){
       return data&0xff;
     }else
@@ -186,8 +188,23 @@ void saveCPUState(void){
     savePC(FILE_PC);            //Zapisz warto�c PC
     saveCounter(FILE_COUNTER);  //Zapisz liczbe wykonanych cykli
 }
-
-
 void setMEMD(AddressType p, DataType i){    //Dopisana na potrzeby STD
     MEMD[p]=i;
+}
+AddressType getSP(){
+    return (getIORegister(SPH_ADRESS)<<8 | getIORegister(SPL_ADRESS));
+}
+void setSP(AddressType sp){
+    setIORegister(SPH_ADRESS, (sp & 0xff00)>>8);
+    setIORegister(SPL_ADRESS, (sp & 0x00ff));
+}
+DataType popFromStack(){
+    //preinkrementacja SP, wskazuje on na pierwsze wolne miejsce w pamieci
+    setSP(getSP()+1);
+    DataType t = getMEMD(getSP());
+}
+void pushOnStack(DataType data){
+    setMEMD(getSP(), data);
+    //postdekrementacja SP, wskazuje on na pierwsze wolne miejsce w pamieci
+    setSP(getSP()-1);
 }

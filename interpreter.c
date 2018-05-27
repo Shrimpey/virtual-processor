@@ -11,15 +11,17 @@ void F_MOV1(void);
 void F_FMUL(void);
 void F_FMULS(void);
 void F_FMULSU(void);
-void F_LDI();
+void F_LDI(void);
 void F_JMP_REL(void);
 void F_OUT(void);
-void F_ELPM_ARG1();
-void F_ELPM_ARG2();
-void F_ELPM_NOARG();
+void F_ELPM_ARG1(void);
+void F_ELPM_ARG2(void);
+void F_ELPM_NOARG(void);
 void F_IJMP(void);
 void F_LDD(void);
 void F_STD(void);
+void F_EIJMP(void);
+void F_EICALL(void);
 
 //wzorce opcodow
 #define ID_MOV_R1_R2            0x2C
@@ -34,7 +36,8 @@ void F_STD(void);
 #define ID_ELPM_NOARG           0x95D8
 #define ID_LDD                  0x11
 #define ID_STD                  0x13
-
+#define ID_EIJMP                0x9419
+#define ID_EICALL               0x9519
 
 void doInstr(CodeType T){
     if( ((T & 0xFC00)>>8) == ID_MOV_R1_R2){
@@ -63,6 +66,10 @@ void doInstr(CodeType T){
         F_LDD();
     }else if ((((T & 0xC000) >> 11) | ((T & 0x1000) >> 10) | ((T & 0x0200) >> 8) | ((T & 0x0008) >> 3)) == ID_STD){
         F_STD();
+    }else if( T == ID_EIJMP ){
+        F_EIJMP();
+    }else if ( T == ID_EICALL){
+        F_EICALL();
     }else{
         printf("Wykryto nieznana instrukcje (PC=0x%08x, T=0x%04x)\r\n", getPC(), T);
         saveCPUState();
