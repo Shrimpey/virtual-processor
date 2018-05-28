@@ -6,9 +6,9 @@ void F_JMP_REL(void){
     printf("0x%04X[0x%04X]: JMP PC+0x%04X\n", getPC(), getOpcode(), getOpcode() & 0x0FFF);
 
     if((getOpcode() & 0x0800)==0)
-        setPC(getPC()+(getOpcode() & 0x0FFF));
+        setPC(getPC()+(getOpcode() & 0x0FFF)+1);
     else
-        setPC(getPC()-(0x1000-(getOpcode() & 0x0FFF)));
+        setPC(getPC()-(0x1000-(getOpcode() & 0x0FFF))+1);
 
     addCounter(1);
 }
