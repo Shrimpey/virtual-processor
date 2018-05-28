@@ -4,6 +4,8 @@
 ### IJMP
 + Drugi test nie wydaje się działać, zapisywane są rejestry r16-r20. Najlepiej zrobić tak, że wszystkie linijki, które nie mają być wykonane mają to samo polecenie (np ldi r20, 0x1A), a jedno/dwa polecenia na końcu do których skaczemy są inne (np ldi r21, 2B) i lepiej nie robić ogarniczenia cykli
 
+// poprawione
+
 ### RJMP
 + dodać 2 testy (w przód i w tył) jak jest więcej etykiet pomiędzy mainem, a docelowymi
 + dodać test, w którym RJMP przechodzi do innej etykiety, a z niej do jeszcze jednej
@@ -11,6 +13,8 @@
 ### LDD i STD
 + w ldd i std jednak nie stykają te testy coś, chyba trzeba zamienić w linijce 10 w f_ldd YH i YL ze sobą, bo jest zły endianess
 + analogicznie dla std
+
+// Poprawione
 
 
 ## Tworzenie testow:
