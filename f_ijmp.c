@@ -13,7 +13,7 @@ void F_IJMP(void){
     DataType R31 = getRegister(ZH_ADRESS);
 
 
-    CodeType jmpAddress = ((R30 <<2) | (R31));
+    CodeType jmpAddress = ((R30 <<8) | (R31));
 
     printf("0x%04X[0x%04X]: IJMP PC=%04X\n", getPC(), getOpcode(), jmpAddress);
 
