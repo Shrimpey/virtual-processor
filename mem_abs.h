@@ -16,7 +16,7 @@ void saveCounter(char *file);
 void loadCounter(char *file);
 
 CodeType getMEMC(AddressType p);
-CodeType getExtendedMEMC(ExtAdressType p);
+CodeType getMEMC(AddressType p);
 DataType getMEMD(AddressType p);
 
 void setPC(AddressType v);
@@ -36,4 +36,8 @@ void resetFlagsRegister(int b);
 int getFlagsRegister(int b);
 void saveCPUState(void);
 void setMEMD(AddressType p, DataType i);  //Dopisana na potrzeby STD
+AddressType getSP();
+void setSP(AddressType sp);
+DataType popFromStack();
+void pushOnStack(DataType data);
 #endif //__MEM_ABS_H__

@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+
 for file in *.s; do
     [ -e "$file" ] || continue
     echo "Processing  $file..."
@@ -10,8 +10,8 @@ for file in *.s; do
     cp $PWD/../file_data.bin $PWD/"binary data"/${file%$".s"}_out.bin
     echo ""
 done
- 
+
 cd $PWD/binary\ data/
- 
+
 echo "Comparing files..."
 "$PWD"/compare.sh
