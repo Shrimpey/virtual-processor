@@ -3,19 +3,27 @@
 ## Sprawdzanie testów
 
 ### LDI
++ Nie widzę sensu umieszczania większej ilości testów tutaj **~Ł**
 ### MOV
++ Nie widzę sensu umieszczania większej ilości testów tutaj **~Ł**
 ### FMUL
++ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
 ### FMULS
++ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
 ### FMULSU
++ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
 ### ELPM
++ czekam na testy od Marcina **~Ł**
 ### EIJMP
++ czekam na testy od Marcina **~Ł**
 ### EICALL
++ czekam na testy od Marcina **~Ł**
 ### IJMP
-+ Brak zastrzeżeń do aktualnych testów, ewentualnie można dodać test, gdzie Zl jest różne od ZH i oba są niezerowe **~Ł**
++ Brak zastrzeżeń **~Ł**
 ### RJMP
 + Brak zastrzeżeń **~Ł**
 ### STD/LDD
-+ Testy są nieaktualne w stosunku do aktualnego działania programy, przesymulować jeszcze raz i zrobić update **~Ł**
++ Brak zastrzeżeń **~Ł**
 
 
 ## Tworzenie testow:
