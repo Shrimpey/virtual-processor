@@ -1,4 +1,22 @@
-# virtual-processor
+# Checklist
+
+## Sprawdzanie testów
+
+### LDI
+### MOV
+### FMUL
+### FMULS
+### FMULSU
+### ELPM
+### EIJMP
+### EICALL
+### IJMP
++ Brak zastrzeżeń do aktualnych testów, ewentualnie można dodać test, gdzie Zl jest różne od ZH i oba są niezerowe **~Ł**
+### RJMP
++ Brak zastrzeżeń **~Ł**
+### STD/LDD
++ Testy są nieaktualne w stosunku do aktualnego działania programy, przesymulować jeszcze raz i zrobić update **~Ł**
+
 
 ## Tworzenie testow:
 1. Tworzymy plik z instrukcjami asemblera z rozszerzeniem .s i wstawiamy do folderu "/tests"
