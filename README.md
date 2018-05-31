@@ -12,10 +12,12 @@
 ### EICALL
 ### IJMP
 + Brak zastrzeżeń do aktualnych testów, ewentualnie można dodać test, gdzie Zl jest różne od ZH i oba są niezerowe **~Ł**
+// Dodane **~P**
 ### RJMP
 + Brak zastrzeżeń **~Ł**
 ### STD/LDD
 + Testy są nieaktualne w stosunku do aktualnego działania programy, przesymulować jeszcze raz i zrobić update **~Ł**
+// Poprawione **~P**
 
 
 ## Tworzenie testow:

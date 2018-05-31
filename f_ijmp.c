@@ -15,7 +15,7 @@ void F_IJMP(void){
 
     CodeType jmpAddress = ((R30 <<8) | (R31));
 
-    printf("0x%04X[0x%04X]: IJMP PC=%04X\n", getPC(), getOpcode(), jmpAddress);
+    printf("0x%04X[0x%04X]: IJMP PC=%04x\n", getPC(), getOpcode(), jmpAddress);
 
     setPC(jmpAddress);
 
