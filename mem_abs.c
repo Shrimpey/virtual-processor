@@ -132,9 +132,6 @@ CodeType getMEMC(AddressType p){
     CodeType t=MEMC[p];
     return t;
 }
-void setMEMD(int n, DataType v){
-    MEMD[n]=v;
-}
 
 DataType getMEMD(AddressType p){
     return MEMD[p];
@@ -192,8 +189,7 @@ void saveCPUState(void){
     savePC(FILE_PC);            //Zapisz warto�c PC
     saveCounter(FILE_COUNTER);  //Zapisz liczbe wykonanych cykli
 }
-<<<<<<< HEAD
-=======
+
 void setMEMD(AddressType p, DataType i){    //Dopisana na potrzeby STD
     MEMD[p]=i;
 }
@@ -214,4 +210,3 @@ void pushOnStack(DataType data){
     //postdekrementacja SP, wskazuje on na pierwsze wolne miejsce w pamieci
     setSP(getSP()-1);
 }
->>>>>>> stos
