@@ -8,7 +8,7 @@ void F_EICALL(){
 
     printf("0x%04X[0x%04X]: EICALL\n", getPC(), getOpcode());
     printf("PC PUSHED TO STACK: %d\n", getPC());
-    printf("JUMP TO: %lx\n", jump_address);
+    printf("JUMP TO: %x\n", jump_address);
     AddressType tpc = getPC();
 
     DataType t = tpc & 0x0000FF;

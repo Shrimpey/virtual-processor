@@ -65,7 +65,7 @@ void loadCounter(char *file){          //�adowanie ostatnio zapisanego licznik
     }
     lseek(file_ptr, 0, SEEK_SET);
     printf("Read counter file (%s) in %ld bytes ", file, read(file_ptr, &counter, sizeof(CounterType)));
-    printf("[counter=0x%08lXloadMEMC]\n", counter);
+    printf("[counter=0x%08lX]\n", counter);
     close(file_ptr);
 }
 void loadMEMC(char *file){          //�adowanie pami�ci kodu z pliku

@@ -10,7 +10,7 @@ void F_EIJMP(){
     jump_address &= ~((1<<23) | (1<<22));
 
     printf("0x%04X[0x%04X]: EIJMP\n", getPC(), getOpcode());
-    printf("JUMP TO: %lx\n", jump_address);
+    printf("JUMP TO: %x\n", jump_address);
 
     setPC(jump_address);
     addCounter(2);
