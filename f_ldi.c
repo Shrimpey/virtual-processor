@@ -13,5 +13,5 @@ void F_LDI(){
 
     setPC(getPC()+1);                                       //zwiększenie licznika rozkaz�w
 
-    addCounter(2);
+    addCounter(1);
 }

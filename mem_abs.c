@@ -50,9 +50,7 @@ void loadPC(char *file){          //�adowanie nowej warto�ci PC
     }
     lseek(file_ptr, 0, SEEK_SET);
     printf("Read PC file (%s) in %ld bytes ", file, read(file_ptr, &tPC, sizeof(AddressType)));
-    //TODO poprawic to
-    PC = tPC;
-    //PC=(tPC & 0xFF00)>>8 | (tPC & 0x00FF)<<8;    //Endianess correction
+    tPC=(tPC&0xFF000000)>>24 | (tPC&0x00FF0000)>>8 | (tPC&0x0000FF00)<<8 | (tPC&0x000000FF)<<24;   //Endianess correction
     printf("[PC=0x%04X]\n", PC);
     close(file_ptr);
 }
@@ -100,8 +98,7 @@ void savePC(char *file){        //Zapisz warto�c PC
     }
     lseek(file_ptr, 0, SEEK_SET);
     //TODO poprawic to
-    //tPC=(PC & 0xFF00)>>8 | (PC & 0x00FF)<<8;		//Endianess correction
-    tPC = PC;
+    tPC=(tPC&0xFF000000)>>24 | (tPC&0x00FF0000)>>8 | (tPC&0x0000FF00)<<8 | (tPC&0x000000FF)<<24;		//Endianess correction
     printf("Write PC (%s) file in %ld bytes [PC=0x%04X]\n", file, write(file_ptr, &tPC, sizeof(AddressType)), PC);
     close(file_ptr);
 }
