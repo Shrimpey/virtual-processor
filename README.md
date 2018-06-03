@@ -1,31 +1,3 @@
-# Checklist
-
-## Sprawdzanie testów
-
-### LDI
-+ Nie widzę sensu umieszczania większej ilości testów tutaj **~Ł**
-### MOV
-+ Nie widzę sensu umieszczania większej ilości testów tutaj **~Ł**
-### FMUL
-+ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
-### FMULS
-+ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
-### FMULSU
-+ Wydaje się działać sensownie o ile dobrze zrozumiałem formatowanie tych liczb **~Ł**
-### ELPM
-+ czekam na testy od Marcina **~Ł**
-### EIJMP
-+ czekam na testy od Marcina **~Ł**
-### EICALL
-+ czekam na testy od Marcina **~Ł**
-### IJMP
-+ Brak zastrzeżeń **~Ł**
-### RJMP
-+ Brak zastrzeżeń **~Ł**
-### STD/LDD
-+ Brak zastrzeżeń **~Ł**
-
-
 ## Tworzenie testow:
 1. Tworzymy plik z instrukcjami asemblera z rozszerzeniem .s i wstawiamy do folderu "/tests"
 2. Postepujemy zgodnie z poleceniami do make-test.sh (instrukcje znajduja sie nizej)
