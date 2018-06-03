@@ -12,10 +12,13 @@ void F_EICALL(){
     AddressType tpc = getPC();
 
     DataType t = tpc & 0x0000FF;
+    printf("%x\n", t);
     pushOnStack(t);
     t = (tpc & 0x00FF00)>>8;
+    printf("%x\n", t);
     pushOnStack(t);
     t = (tpc & 0xFF0000)>>16;
+    printf("%x\n", t);
     pushOnStack(t);
 
     setPC(jump_address);

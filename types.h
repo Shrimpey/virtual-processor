@@ -32,8 +32,8 @@ typedef unsigned long               CounterType;
 #define YH_ADRESS                   0x1D
 #define ZL_ADRESS                   0x1E
 #define ZH_ADRESS                   0x1F
-#define SPL_ADRESS                  0x3E
-#define SPH_ADRESS                  0x3D
+#define SPL_ADRESS                  0x3D
+#define SPH_ADRESS                  0x3E
 
 //Znaczenie flag
 #define FLAG_C                      0x00

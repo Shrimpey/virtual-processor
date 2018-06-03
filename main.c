@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
         set_intterrupt(int_gen);        //zapamietaj kiedy wywolac przerwanie
 
     //inicjalizacja wskaznika na stos
-    setSP(MAX_INTERNAL_SRAM);
+    setSP(0x21FF);
     printf("STACK POINTER SET TO %x\n", MAX_INTERNAL_SRAM);
 
     for(;;){

@@ -204,6 +204,7 @@ DataType popFromStack(){
 }
 void pushOnStack(DataType data){
     setMEMD(getSP(), data);
+    printf("pushing on stack\nSP:%x, data:%x\n", getSP(), data);
     //postdekrementacja SP, wskazuje on na pierwsze wolne miejsce w pamieci
     setSP(getSP()-1);
 }
