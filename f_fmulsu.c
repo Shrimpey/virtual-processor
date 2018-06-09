@@ -12,7 +12,7 @@ void F_FMULSU(void){
 
     DataType R1_pp = ((getRegister(R1) & 0x80) == 0x80) ? (~(getRegister(R1) - 1)) : (getRegister(R1));     //Przejscie z U2
 
-    CodeType result = R1_pp * getRegister(R2);    //Obliczenie wyniku
+    CodeTypeAryt result = (CodeTypeAryt)(R1_pp) * (CodeTypeAryt)(getRegister(R2));    //Obliczenie wyniku
 
     result = ((getRegister(R1) & 0x80) == 0x80) ? (~result + 1) : (result);     //Przejscie do U2
 

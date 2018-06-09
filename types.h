@@ -4,6 +4,7 @@
 //definicje nowych typow danych
 typedef unsigned char               DataType;
 typedef unsigned short              CodeType;
+typedef unsigned short              CodeTypeAryt;	//Typ dla wyniku zaawansowanych funkcji arytmetycznych
 typedef unsigned int                AddressType;
 typedef unsigned short              SPType;
 typedef unsigned long               CounterType;
