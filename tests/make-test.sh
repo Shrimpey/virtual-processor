@@ -30,9 +30,9 @@ avr-objcopy --output-target binary ${EXTENSION}.elf ${EXTENSION}.bin
 avr-objdump -d ${EXTENSION}.elf > ${EXTENSION}.lst
 
 echo "Test Generator> Copying binary file to /binary codes..."
-cp ${EXTENSION}.bin $PWD/"binary codes"
+cp ${EXTENSION}.bin "$PWD"/"binary codes"
 echo "Test Generator> Copying binary file as file_code.bin to processor..."
-mv -f ${EXTENSION}.bin $PWD/../file_code.bin
+mv -f ${EXTENSION}.bin "$PWD"/../file_code.bin
 
 
 echo "Test Generator> Chosen file: ${EXTENSION}"
@@ -44,7 +44,7 @@ echo "Test Generator> Temporary test files removed!"
 
 
 echo "Test Generator> Copying clean data file to processor and /binary data..."
-cp -f _clean_data.bin $PWD/../file_data.bin
-cp -f _clean_data.bin $PWD/"binary data"/${EXTENSION}_in.bin
+cp -f _clean_data.bin "$PWD"/../file_data.bin
+cp -f _clean_data.bin "$PWD"/"binary data"/${EXTENSION}_in.bin
 
 fi
