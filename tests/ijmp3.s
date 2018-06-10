@@ -3,6 +3,7 @@
 .type    main, @function
 
 main:
-    mov r18, r17
-    ldi r17, 0x01
+    ldi r30, 0x00
+    ldi r31, 0x00
     ijmp
+    ldi r16, 0x01
