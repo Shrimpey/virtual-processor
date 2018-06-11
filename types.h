@@ -14,7 +14,7 @@ typedef unsigned long               CounterType;
 #define MAX_DATA_VAL                0xFF
 
 //poczatkowa wartosc wskaznika na stos
-#define INITIAL_SP_VALUE
+#define INITIAL_SP                  0x21FF
 
 //Numer ostatniego rejestru
 #define REGISTERS_COUNT             (0x001F-0x0000)+1

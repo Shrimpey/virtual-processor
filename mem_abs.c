@@ -97,7 +97,6 @@ void savePC(char *file){        //Zapisz warto�c PC
         exit(-5);
     }
     lseek(file_ptr, 0, SEEK_SET);
-    //TODO poprawic to
     tPC=(tPC&0xFF000000)>>24 | (tPC&0x00FF0000)>>8 | (tPC&0x0000FF00)<<8 | (tPC&0x000000FF)<<24;		//Endianess correction
     printf("Write PC (%s) file in %ld bytes [PC=0x%04X]\n", file, write(file_ptr, &tPC, sizeof(AddressType)), PC);
     close(file_ptr);
@@ -194,8 +193,8 @@ AddressType getSP(){
     return (getIORegister(SPH_ADRESS)<<8 | getIORegister(SPL_ADRESS));
 }
 void setSP(AddressType sp){
-    setIORegister(SPH_ADRESS, (sp & 0xff00)>>8);
-    setIORegister(SPL_ADRESS, (sp & 0x00ff));
+    setIORegister(SPH_ADRESS, (DataType) ((sp & 0xff00)>>8));
+    setIORegister(SPL_ADRESS, (DataType) (sp & 0x00ff));
 }
 DataType popFromStack(){
     //preinkrementacja SP, wskazuje on na pierwsze wolne miejsce w pamieci

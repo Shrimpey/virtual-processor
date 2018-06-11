@@ -78,8 +78,8 @@ int main(int argc, char *argv[]) {
         set_intterrupt(int_gen);        //zapamietaj kiedy wywolac przerwanie
 
     //inicjalizacja wskaznika na stos
-    setSP(0x21FF);
-    printf("STACK POINTER SET TO %x\n", MAX_INTERNAL_SRAM);
+    setSP(INITIAL_SP);
+    printf("STACK POINTER SET TO %x\n", INITIAL_SP);
 
     for(;;){
         T=getOpcode();                  //T=opcode operacji (w��cznie z arg. wbudowanym)

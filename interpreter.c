@@ -22,6 +22,7 @@ void F_LDD(void);
 void F_STD(void);
 void F_EIJMP(void);
 void F_EICALL(void);
+void F_NOP(void);
 
 //wzorce opcodow
 #define ID_MOV_R1_R2            0x2C

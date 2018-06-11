@@ -5,7 +5,7 @@
 //funkcja EIJMP, wykonująca skok na adres wskazywany przez konkatenacje rejestrów Z i EIND
 void F_EIJMP(){
     //konkatenacja rejestrow RAMPZ, ZH i ZL wskazujaca adres w pamieci
-    AddressType jump_address= (getIORegister(EIND_ADRESS)<<16) | (getRegister(ZH_ADRESS)<<8) | getRegister(ZL_ADRESS);
+    AddressType jump_address= ((AddressType)(getIORegister(EIND_ADRESS)<<16)) | ((AddressType)(getRegister(ZH_ADRESS)<<8)) | ((AddressType)getRegister(ZL_ADRESS));
     //PC ma 22 bity, więc pierwsze 2 bity są zerowane;
     jump_address &= ~((1<<23) | (1<<22));
 
