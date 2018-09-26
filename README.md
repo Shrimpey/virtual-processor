@@ -1,26 +1,39 @@
-## Tworzenie testow:
-1. Tworzymy plik z instrukcjami asemblera z rozszerzeniem .s i wstawiamy do folderu "/tests"
-2. Postepujemy zgodnie z poleceniami do make-test.sh (instrukcje znajduja sie nizej)
-3. Postepujemy zgodnie z poleceniami do compare.sh (instrukcje znajduja sie nizej)
-4. Otrzymane pliki .hex beda wstawiane do sprawozdania jako wyniki testow
+# Virtual Atmega2561 emulator
+Emulator of Atmega2561 selected instructions written in C.
+Implemented instructions:
+- LDI
+- MOV
+- FMUL
+- FMULS
+- FMULSU
+- ELPM
+- EIJMP
+- EICALL
+- IJMP
+- RJMP
+- LDD
+- STD
 
-### Uzywanie skryptu make-test.sh:
-1. Wrzucamy plik z rozszerzeniem .s do folderu "/tests" (ma on zawierac instrukcje dla assemblera, przyklad w pliku fmul_1.s)
-2. W terminalu wpisujemy "./make-test.sh -f nazwa_pliku" (bez specyfikowania rozszerzenia) i skrypt zrobi za nas wszystko co trzeba (skopiuje otrzymany plik z intrukcjami do procesora wraz z czystym plikiem z danymi)
-3. Odpalamy procesor ./syko.exe z argumentami, jakich potrzebujemy
-4. Dane wyjsciowe (file_data.bin) kopiujemy do "tests/binary data" zmieniajac nazwe na "nazwa_out.bin", gdzie nazwa to nazwa testu
+## Creating Unit Tests:
+1. Create file with assembly instructions (file with .s extension) and put it into "/tests" folder
+2. Follow the "make-test.sh" instructions written below
+3. Follow the "compare.sh" instructions written below
+4. Generated .hex files will showcase the functionality of the instructions.
 
-_P.S. do tego potrzebne sa komendy avr, nie pamietam czy one sa z arduino czy jakos standardowo, w kazdym razie ja instalowalem "apt-get install arduino"_
+### Using the make-test.sh script:
+1. Write "./make-test.sh -f filename" (filename without the extension)
+2. Run the emulator ("./syko.exe" with apropriate arguments)
+3. Copy the output file (file_data.bin) to "tests/binary data" and rename it to "name_out.bin" where name is the name of the test
 
+### Using the compare.sh script:
+1. Run "./compare.sh" inside the folder "binary data", there will be created two output files: .dec i .hex
 
-### Uzywanie skryptu compare.sh:
-1. Uruchamiamy "./compare.sh" w folderze "binary data" i zostaja utworzone po dwa pliki do kazdego testu - .dec i .hex, stanowia one porownanie danych w dec i hex
+## Using the test-all.sh script"
+This script runs for each .s test file inside /tests/
+It does the following:
+1. Runs the make-test.sh script and creates adequate binary files
+2. Runs syko.exe with arguments: 30 30 zeroPC
+3. Copies output files (file_data.bin) to /tests/binary data with adequate name
+4. Runs compare.sh script and creates comparison .hex and .dec files
 
-## Uzywanie skryptu test-all.sh
-Skrypt który dla każdego pliku testowego (z rozszerzeniem .s) w folderze /tests/ powoduje:
-1. Uruchomienie skryptu make-test.sh, a co za tym idzie utworzenie odpowiednich plików binarnych
-2. Wywołanie programu syko.exe z argumentami 30 30 zeroPC
-3. Skopiowanie danych wyjściowych (file_data.bin) do folderu /tests/binary data z odpowiednią nazwą
-Następnie uruchamiany jest skrypt compare.sh
-
-Żeby go uruchomic należy wpisać w terminalu ". ./test-all.sh", koniecznie z kropką na początku z poziomu folderu /tests/
+To run it write ". ./test-all.sh" in terminal from "/tests/" folder
